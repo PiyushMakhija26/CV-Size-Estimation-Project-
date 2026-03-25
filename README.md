@@ -70,6 +70,15 @@
 
 ## 🚀 Quick Start
 
+### Option 0: Streamlit Cloud (system libraries for mediapipe)
+Create `packages.txt` in the project root with these lines:
+```text
+libgl1-mesa-glx
+libgles2-mesa
+libegl1-mesa
+```
+This ensures `libGL.so.1` and `libGLESv2.so.2` are available in the cloud runtime.
+
 ### Option 1: Web App (Recommended for First-Time Users)
 ```bash
 python -m streamlit run app.py
