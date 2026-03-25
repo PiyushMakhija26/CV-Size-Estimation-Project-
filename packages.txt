@@ -1,3 +1,0 @@
-libgl1-mesa-glx
-libgles2-mesa
-libegl1-mesa
