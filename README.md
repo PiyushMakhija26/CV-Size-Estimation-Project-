@@ -70,42 +70,42 @@
 
 ## 🚀 Quick Start
 
-### Option 0: Streamlit Cloud (system libraries for mediapipe)
-Create `packages.txt` in the project root with these lines:
-```text
-libgl1-mesa-glx
-libgles2-mesa
-libegl1-mesa
-```
-This ensures `libGL.so.1` and `libGLESv2.so.2` are available in the cloud runtime.
+### Entry Points
+Choose one of the three interfaces below:
 
-### Option 1: Web App (Recommended for First-Time Users)
-```bash
-python -m streamlit run app.py
-```
-- Opens at: `http://localhost:8501`
-- **Choose**: Take photo with camera OR upload existing image
-- **Enter**: Your height (cm) and weight (kg)
-- **Get**: Size recommendation with detailed metrics
-
-### Option 2: Desktop GUI
-```bash
-python app_gui.py
-```
-Or on Windows:
-```powershell
-.\run_gui.bat
-```
-- **Features**: Capture/upload buttons, local file browser, status indicators
-- **Saves**: All images to `captured_images/` folder, results to `results/` folder
-
-### Option 3: Command-Line Interface
+#### 1️⃣ **Command-Line Interface (CLI)**
 ```bash
 python vision_fit.py
 ```
-- **Follow prompts**: Select calibration method (A4 or height)
-- **Capture**: Press `c` when ready, then follow instructions
-- **Export**: Results saved as timestamped text file
+✅ **Best for**: Headless/scripted operation, batch processing
+- Interactive prompts for calibration method (A4 paper or height)
+- Webcam capture or file input workflows
+- Results saved as timestamped text files
+- Fully non-blocking, terminal-based
+
+#### 2️⃣ **Web App (Streamlit)** ⭐ Recommended for First-Time Users
+```bash
+python -m streamlit run app.py
+```
+✅ **Best for**: Browser-based access, easy UI, responsive design
+- Opens at: `http://localhost:8501`
+- Camera capture OR image upload
+- Real-time results dashboard
+- Black/white theme, mobile-friendly
+
+#### 3️⃣ **Desktop GUI (Tkinter)**
+```bash
+python app_gui.py
+```
+✅ **Best for**: Standalone desktop application, local file storage
+- Point-and-click interface
+- Capture/upload buttons with file browser
+- Results automatically saved to `captured_images/` and `results/` folders
+
+**Windows alternative**:
+```powershell
+.\run_gui.bat
+```
 
 ---
 
